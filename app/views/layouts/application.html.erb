@@ -23,9 +23,17 @@
         <div id="gnavi" class="collapse navbar-collapse">
           <div class="top-navbar-menu">
             <ul class="nav navbar-nav">
-              <li><a href="/">top</a></li>
-              <li><%= link_to "ユーザー登録",new_user_path %></li>
-              <li><%= link_to "ログイン",new_session_path %></li>
+              <% if logged_in? %>
+                <li><%= link_to "プロフィール", user_path(current_user.id) %></li>
+                <li><%= link_to "#{current_user.name}さんの投稿一覧",user_path(current_user.id) %></li>
+                <li><%= link_to "新規投稿", user_path(current_user.id) %></li>
+                <li><%= link_to "ログアウト", session_path(current_user.id), method: :delete %></li>
+              <% else %>
+
+                <li><a href="/">top</a></li>
+                <li><%= link_to "ユーザー登録",new_user_path %></li>
+                <li><%= link_to "ログイン",new_session_path %></li>
+              <% end %>
             </ul>
           </div>
         </div>
