@@ -17,7 +17,6 @@ class SessionsController < ApplicationController
 
   def destroy
     session.delete(:user_id)
-    @current_user = nil
     flash[:info] = "ログアウトに成功しました"
     redirect_to root_path
   end
