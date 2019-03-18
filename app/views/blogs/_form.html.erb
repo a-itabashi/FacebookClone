@@ -2,7 +2,7 @@
   <% if @blog.errors.any? %>
     <div id="error_explanation" class="alert alert-danger">
       <ul>
-        <% @blgo.errors.full_messages.each do |message| %>
+        <% @blog.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
       </ul>
