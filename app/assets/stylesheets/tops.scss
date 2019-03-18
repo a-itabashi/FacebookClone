@@ -1,3 +1,74 @@
-// Place all the styles related to the tops controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+html{
+  height:100%;
+}
+
+body{
+  height:100%;
+}
+
+.container{
+  position: relative;
+  min-height:100%;
+  padding-bottom:40px;
+  padding-top: 50px;
+}
+
+
+/*ヘッダー*/
+.top-navbar-menu{
+  float:right;
+}
+
+.navbar-default .nav > li > a {
+  color: #ffffff;
+  font-size: 25px;
+}
+
+.navbar-default .navbar-brand{
+  color: #ffffff;
+  font-size: 30px;
+  padding-left: 40px;
+}
+ 
+.navbar-default .brand:hover,
+.navbar-default .nav > li > a:hover,
+.navbar-default .brand:focus,
+.navbar-default .nav > li > a:focus {
+  color: #aaaaaa;
+}
+ 
+.navbar-default .brand {
+  color: #ffffff;
+}
+
+.navbar-default{
+  background-color: #3D5A99;
+}
+
+/*フッター*/
+.footer{
+  height:40px;
+  background-color: #3D5A99;
+  display: table;
+  width:100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer p{
+  color:#ffffff;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.container-fluid{
+  padding: 0;
+}
+
+
+
+
+
+
+

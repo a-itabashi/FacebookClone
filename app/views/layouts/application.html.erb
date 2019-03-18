@@ -9,6 +9,41 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#gnavi">
+            <span class="sr-only">FacebookClone</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">FacebookClone</a>
+        </div>
+        <div id="gnavi" class="collapse navbar-collapse">
+          <div class="top-navbar-menu">
+            <ul class="nav navbar-nav">
+              <li><a href="/">top</a></li>
+              <li><%= link_to "ユーザー登録",new_user_path %></li>
+              <li><a href="">ログイン</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <% flash.each do |message_type, message| %>
+        <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+      <% end %>
+
     <%= yield %>
+   
+   </div>
+   <div class="container-fluid">
+    <footer class="footer">
+      <p>Powered by Aguru Itabashi</p>
+    </footer>
+   </div>  
   </body>
 </html>
