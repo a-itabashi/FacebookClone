@@ -28,7 +28,7 @@
               <% if logged_in? %>
                 <li><%= link_to "プロフィール", user_path(current_user.id) %></li>
                 <li><%= link_to "新規投稿", new_blog_path %></li>
-                <li><%= link_to "ログアウト", session_path(current_user.id), method: :delete %></li>
+                <li><%= button_to "ログアウト", session_path(current_user.id), method: :delete %></li>
               <% else %>
 
                 <li><a href="/">top</a></li>
