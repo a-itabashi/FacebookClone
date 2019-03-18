@@ -1,2 +1,36 @@
-<h1>Blogs#confirm</h1>
-<p>Find me in app/views/blogs/confirm.html.erb</p>
+<h1>投稿内容の確認</h1>
+
+<%= form_with(model: @blog, url: blogs_path, local: true) do |f| %>
+    <%= f.hidden_field :title %>
+    <%= f.hidden_field :content %>
+    <%= f.hidden_field :image %>
+  <table class="table">
+    <tr>
+      <th>タイトル</th>
+      <td><%= @blog.title %></td>
+    </tr>
+    <tr>
+      <th>内容</th>
+      <td><%= @blog.content %></td>
+    </tr>
+    <tr>
+      <th>画像</th>
+      <td>
+        <%= image_tag(@blog.image.url) if @blog.image && @blog.image.url %>   
+        <%= f.hidden_field :image_cache %>   
+      </td>
+    </tr>
+  </table>
+      <p class="btn-confirm">
+        <%= f.submit "投稿する" %>
+      </p>
+ <% end %>
+      
+<%= form_with(model: @blog, url: new_blog_path, local: true, method: :get) do |f| %> 
+  <%= f.hidden_field :title %>
+  <%= f.hidden_field :content %> 
+  <%= f.hidden_field :image_cache %>   
+    <p class="btn-confirm">
+      <%= f.submit "戻る", name: "back" %>    
+    </p>
+<% end %>

@@ -10,7 +10,7 @@ body{
   position: relative;
   min-height:100%;
   padding-bottom:40px;
-  padding-top: 50px;
+  padding-top: 100px;
 }
 
 
@@ -67,8 +67,19 @@ body{
   position: relative;;
 }
 
+ul{
+  margin-bottom:50px;
+  padding: 0;
+}
 
+li{
+  list-style: none;
+}
 
+.top-edit-destroy{
+  text-align:center;
+  padding: 20px;
+}
 
 
 

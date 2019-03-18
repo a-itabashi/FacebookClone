@@ -4,7 +4,7 @@ class CreateBlogs < ActiveRecord::Migration[5.1]
       t.string :title
       t.text :content
       t.text :image
-      t.string :user_references
+      t.references :user, foreign_key: true
 
       t.timestamps
     end

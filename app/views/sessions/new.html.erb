@@ -1,6 +1,6 @@
 <h1>ログイン</h1>
 
-<%= form_with(scope: :session, local: true) do |f| %>
+<%= form_with(scope: :session, url: sessions_path, local: true) do |f| %>
   <table class="table">
     <tr>
       <th><%= f.label :email, "メールアドレス" %></th>
@@ -8,7 +8,7 @@
     </tr>
     <tr>
       <th><%= f.label :password, "パスワード" %></th>
-      <td><%= f.email_field :email %></td>
+      <td><%= f.password_field :password %></td>
     </tr>
     <tr>
       <th></th>

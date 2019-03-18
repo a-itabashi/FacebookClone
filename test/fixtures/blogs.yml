@@ -4,10 +4,10 @@ one:
   title: MyString
   content: MyText
   image: MyText
-  user_references: MyString
+  user: one
 
 two:
   title: MyString
   content: MyText
   image: MyText
-  user_references: MyString
+  user: two
