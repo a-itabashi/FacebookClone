@@ -3,12 +3,16 @@
 <%= form_with(scope: :session, local: true) do |f| %>
   <table class="table">
     <tr>
-      <%= f.label :email, "メールアドレス" %>
-      <%= f.email_field :email %>
+      <th><%= f.label :email, "メールアドレス" %></th>
+      <td><%= f.email_field :email %></td>
     </tr>
     <tr>
-      <%= f.label :email, "メールアドレス" %>
-      <%= f.email_field :email %>
+      <th><%= f.label :password, "パスワード" %></th>
+      <td><%= f.email_field :email %></td>
+    </tr>
+    <tr>
+      <th></th>
+      <td><%= f.submit "ログイン" %></td>
     </tr>
   </table>
 <% end %>
